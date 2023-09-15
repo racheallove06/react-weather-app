@@ -6,6 +6,7 @@ import WeatherInfo from "./WeatherInfo";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [cityValue, setCity] = useState(city);
 
   function handleSubmit(response) {
     console.log(response.data.temperature.time);
@@ -19,6 +20,15 @@ export default function App() {
       humidity: response.data.temperature.humidity,
       date: response.data.temperature.time,
     });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault;
+    //it will search for a city by making an api call//
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -80,7 +90,7 @@ export default function App() {
   } else {
     const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
     let city = "Nairobi";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleSubmit);
   }
   return "Loading...";
