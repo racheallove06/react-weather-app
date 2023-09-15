@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 
-export default function App() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [cityValue, setCity] = useState(city);
+  const [cityValue, setCity] = useState(props.city);
 
   function handleSubmit(response) {
     console.log(response.data.temperature.time);
@@ -21,9 +21,16 @@ export default function App() {
       date: response.data.temperature.time,
     });
   }
+  function searchCity() {
+    const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
+
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleSubmit);
+  }
 
   function handleSubmit(event) {
-    event.preventDefault;
+    event.preventDefault();
+    searchCity();
     //it will search for a city by making an api call//
   }
 
@@ -88,10 +95,6 @@ export default function App() {
       </div>
     );
   } else {
-    const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
-    let city = "Nairobi";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleSubmit);
   }
   return "Loading...";
 }
