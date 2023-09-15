@@ -1,7 +1,8 @@
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -25,7 +26,7 @@ export default function App() {
       <div className="App">
         <div className="container">
           <div className="inner-container">
-            <form id="search-form">
+            <form id="search-form" onChange={handleSubmit}>
               <div className="container-2">
                 <div className="row">
                   <div className="col-6">
@@ -36,6 +37,7 @@ export default function App() {
                       autoComplete="off"
                       className="form-control btn btn-primary shadow-sm"
                       id="search-text-input"
+                      onChange={handleCityChange}
                     />
                   </div>
 
@@ -60,54 +62,7 @@ export default function App() {
                 </div>
               </div>
             </form>
-
-            <div className="row" id="row-2">
-              <div className="col-4">
-                <h1>
-                  <span>
-                    {" "}
-                    <img id="weather-icon" src="" alt="" />{" "}
-                  </span>
-                  <span id="celsius">
-                    {Math.round(weatherData.temperature)}
-                  </span>
-                  <span className="degree">
-                    <a href="#" id="celcius-link" className="active">
-                      ⁰C |{" "}
-                    </a>
-                    <a href="#" id="faren-link">
-                      {" "}
-                      ⁰F
-                    </a>
-                  </span>
-                </h1>
-              </div>
-              <div className="col-4">
-                <ul>
-                  <li id="humidity">Humidity:{weatherData.humidity}</li>
-                  <li id="wind">Wind:{weatherData.wind}</li>
-                </ul>
-              </div>
-              <div className="col-4">
-                <p3>
-                  <div id="city">{weatherData.city}</div>
-                  <p className="time" id="time-element">
-                    <FormattedDate date={weatherData.date} />
-                    <br />
-                  </p>
-                  <div id="description">{weatherData.description}</div>
-                </p3>
-              </div>
-            </div>
-
-            <p2>
-              <span className="temp">Temperature</span>
-              <span>|</span>
-              <span className="precipitation">Precipitation</span>
-              <span>|</span>
-              <span className="wind">Wind</span>
-            </p2>
-            <div className="weather-forecast" id="forecast"></div>
+            <WeatherInfo info={weatherData} />
 
             <small id="opensource">
               <a
