@@ -7,12 +7,9 @@ export default function WeatherInfo(props) {
       <div className="row" id="row-2">
         <div className="col-4">
           <h1>
-            <span>
+            <span class="icon">
               {" "}
-              <WeatherIcon
-                icon={props.info.icon}
-                alt={props.info.description}
-              />
+              <WeatherIcon icon={props.info.icon} />
             </span>
             <span id="celsius">{Math.round(props.info.temperature)}</span>
             <span className="degree">

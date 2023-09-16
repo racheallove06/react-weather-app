@@ -137,7 +137,7 @@ h1 {
   top: 10px;
 }
 
-#weather-icon {
+.icon canvas {
   font-size: 40px;
 }
 
