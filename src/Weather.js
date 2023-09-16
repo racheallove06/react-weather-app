@@ -9,7 +9,7 @@ export default function Weather(props) {
   const [cityValue, setCity] = useState(props.city);
 
   function handleSubmit(response) {
-    console.log(response.data.temperature.time);
+    console.log(response);
 
     setWeatherData({
       temperature: response.data.temperature.current,
@@ -28,8 +28,7 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleSubmit);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit() {
     searchCity();
     //it will search for a city by making an api call//
   }
@@ -43,7 +42,7 @@ export default function Weather(props) {
       <div className="App">
         <div className="container">
           <div className="inner-container">
-            <form id="search-form" onChange={handleSubmit}>
+            <form id="search-form" onSubmit={handleSubmit}>
               <div className="container-2">
                 <div className="row">
                   <div className="col-6">
@@ -95,6 +94,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    searchCity();
+    return "Loading...";
   }
-  return "Loading...";
 }
