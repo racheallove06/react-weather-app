@@ -96,6 +96,5 @@ export default function Weather(props) {
     );
   } else {
     searchCity();
-    return "Loading...";
   }
 }
