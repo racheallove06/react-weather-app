@@ -8,7 +8,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [cityValue, setCity] = useState(props.city);
 
-  function handleSubmit(response) {
+  function handleResponse(response) {
     console.log(response);
 
     setWeatherData({
@@ -24,12 +24,12 @@ export default function Weather(props) {
   }
   function searchCity() {
     const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
-
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleSubmit);
+    axios.get(apiUrl).then(handleResponse);
   }
 
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
     searchCity();
     //it will search for a city by making an api call//
   }
