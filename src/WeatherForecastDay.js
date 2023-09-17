@@ -4,8 +4,9 @@ export default function WeatherForecastDay(props) {
   function day() {
     let date = new Date(props.data.time * 1000);
     let day = date.getDay();
+    let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    return day;
+    return daysOfWeek[day];
   }
   return (
     <div class="weather-forecast-date">
