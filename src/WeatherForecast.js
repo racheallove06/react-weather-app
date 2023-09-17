@@ -7,9 +7,11 @@ export default function WeatherForecast(props) {
   function handleResponse(response) {
     console.log(response.data);
     setForecast(response.data.daily);
+    setLoaded(true);
   }
 
   if (loaded) {
+    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div class="row">
@@ -20,8 +22,12 @@ export default function WeatherForecast(props) {
               <WeatherIcon size={36} />
               <br />
               <div class="temperature-container">
-                <span class="temperature temperature-1">17°</span>
-                <span class="temperature temperature-2">24°</span>
+                <span class="temperature temperature-1">
+                  {Math.round(forecast[0].temperature.maximum)}°
+                </span>
+                <span class="temperature temperature-2">
+                  {Math.round(forecast[1].temperature.minimum)}°
+                </span>
               </div>
             </div>
           </div>
