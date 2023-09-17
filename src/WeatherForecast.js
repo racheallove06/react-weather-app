@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
 export default function WeatherForecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
   function handleResponse(response) {
     console.log(response.data);
+    setForecast(response.data.daily);
   }
 
   if (loaded) {
