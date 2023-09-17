@@ -81,7 +81,7 @@ export default function Weather(props) {
               </div>
             </form>
             <WeatherInfo info={weatherData} />
-            <WeatherForecast />
+            <WeatherForecast info={weatherData} />
 
             <small id="opensource">
               <a
