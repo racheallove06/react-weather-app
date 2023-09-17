@@ -2,6 +2,8 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecast() {
+  apiKey = "aac97fb2fbt9362853a0a43aca162o74";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query={query}&key={key}`;
   return (
     <div className="WeatherForecast">
       <div class="row">
