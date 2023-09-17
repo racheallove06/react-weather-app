@@ -19,14 +19,15 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       date: response.data.temperature.time,
       icon: response.data.condition.icon_url,
+      temperature: response.data.temperature.current,
     });
   }
-  temperature: response.data.temperature.current,
-    function searchCity() {
-      const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
-      const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
-      axios.get(apiUrl).then(handleResponse);
-    };
+
+  function searchCity() {
+    const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
