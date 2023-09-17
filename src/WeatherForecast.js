@@ -10,13 +10,6 @@ export default function WeatherForecast(props) {
   }
 
   if (loaded) {
-    let key = "aac97fb2fbt9362853a0a43aca162o74";
-    let city = props.info.city;
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}`;
-
-    axios.get(apiUrl).then(handleResponse);
-    return null;
-  } else {
     return (
       <div className="WeatherForecast">
         <div class="row">
@@ -35,5 +28,12 @@ export default function WeatherForecast(props) {
         </div>
       </div>
     );
+  } else {
+    let key = "aac97fb2fbt9362853a0a43aca162o74";
+    let city = props.info.city;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}`;
+
+    axios.get(apiUrl).then(handleResponse);
+    return null;
   }
 }
