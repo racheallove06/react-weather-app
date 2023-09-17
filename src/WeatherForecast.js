@@ -17,9 +17,9 @@ export default function WeatherForecast(props) {
         <div class="row">
           <div class="col">
             <div class="weather-forecast-date">
-              day
+              {forecast[0].time}
               <br />
-              <WeatherIcon size={36} />
+              <WeatherIcon code={forecast[0].icon} size={36} />
               <br />
               <div class="temperature-container">
                 <span class="temperature temperature-1">
