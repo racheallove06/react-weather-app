@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherInfo(props) {
+  console.log("WeatherInfo", props.info.temperature);
   return (
     <div className="root">
       <div className="row" id="row-2">
@@ -12,7 +13,7 @@ export default function WeatherInfo(props) {
               {" "}
               <WeatherIcon icon={props.info.icon} />
             </span>
-            <WeatherTemperature celsius={props.info.temprature} />
+            <WeatherTemperature celsius={props.info.temperature} />
           </h1>
         </div>
         <div className="col-4">

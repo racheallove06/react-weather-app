@@ -12,7 +12,6 @@ export default function Weather(props) {
     console.log(response);
 
     setWeatherData({
-      temperature: response.data.temperature.current,
       description: response.data.condition.description,
       wind: response.data.wind.speed,
       ready: true,
@@ -22,11 +21,12 @@ export default function Weather(props) {
       icon: response.data.condition.icon_url,
     });
   }
-  function searchCity() {
-    const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-  }
+  temperature: response.data.temperature.current,
+    function searchCity() {
+      const apiKey = "aac97fb2fbt9362853a0a43aca162o74";
+      const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(handleResponse);
+    };
 
   function handleSubmit(event) {
     event.preventDefault();
