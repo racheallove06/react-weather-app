@@ -74,7 +74,7 @@ export default function Weather(props) {
 
             <small id="opensource">
               <a
-                href="https://github.com/racheallove06/racheallove06.github.io"
+                href="https://github.com/racheallove06/react-weather-app"
                 target="_blank"
               >
                 Open source code
