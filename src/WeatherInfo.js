@@ -19,19 +19,18 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col">
           <ul>
-            <li id="humidity">Humidity:{props.info.humidity}</li>
-            <li id="wind">Wind:{props.info.wind}</li>
+            <li>Humidity:{props.info.humidity}</li>
+            <li>Wind:{props.info.wind}km/hr</li>
           </ul>
         </div>
-        <div className="col">
-          <div>
-            <div id="city">{props.info.city}</div>
-            <p className="time" id="time-element">
+        <div className="col description-sec">
+          <ul>
+            <li>{props.info.city}</li>
+            <li>
               <FormattedDate />
-              <br />
-            </p>
-            <div id="description">{props.info.description}</div>
-          </div>
+            </li>
+            <li>{props.info.description}</li>
+          </ul>
         </div>
       </div>
       <div>

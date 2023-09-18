@@ -114,13 +114,13 @@ h1 {
   top: 10px;
 }
 
-.icon canvas {
-  font-size: 300px;
+.icon {
+  margin-bottom: 50px;
 }
 
 li {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.5;
 }
 p2 {
@@ -154,14 +154,13 @@ p2 {
   cursor: pointer;
   color: #34e1ff;
 }
-#city {
+
+.description-sec {
   font-weight: 600;
   font-size: 24px;
+  margin-left: 30px;
 }
-.time {
-  font-size: 24px;
-  font-weight: 600;
-}
+
 p3 {
   position: relative;
   line-height: 1.2;
@@ -206,18 +205,13 @@ p3 {
 }
 ul {
   list-style: none;
-  position: relative;
-  bottom: -20px;
-  right: -30px;
-  padding: 0;
-  margin-bottom: 20px;
+  margin-left: 10px;
 }
 #description {
-  position: relative;
-  top: -10px;
   font-size: 24px;
   color: #fff;
   font-weight: 400;
+  margin-top: -40px;
 }
 a {
   text-decoration: none;
