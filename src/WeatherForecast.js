@@ -21,26 +21,30 @@ export default function WeatherForecast(props) {
   if (loaded) {
     console.log(forecast);
     return (
-      <div className="WeatherForecast">
-        <div className="row">
-          <div className="col">
+      <div className="WeatherForecast weather-forecast">
+        <div className="row forecastt  ">
+          <div className="col forecol">
             <WeatherForecastDay data={forecast[1]} />
           </div>
 
-          <div class="col">
+          <div class="col forecol">
             <WeatherForecastDay data={forecast[2]} />
           </div>
 
-          <div class="col">
+          <div class="col forecol">
             <WeatherForecastDay data={forecast[3]} />
           </div>
 
-          <div class="col">
+          <div class="col forecol">
             <WeatherForecastDay data={forecast[4]} />
           </div>
 
-          <div class="col">
+          <div class="col forecol">
             <WeatherForecastDay data={forecast[5]} />
+          </div>
+
+          <div class="col forecol">
+            <WeatherForecastDay data={forecast[6]} />
           </div>
         </div>
       </div>
