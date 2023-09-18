@@ -14,14 +14,14 @@ body {
 
 .container {
   width: 700px;
-  height: 350px;
+  height: 500px;
   margin: 20px;
   background: linear-gradient(
     181.2deg,
     rgb(52, 225, 255) 10.5%,
     rgb(254, 254, 254) 86.8%
   );
-  padding: 0;
+
   border: 1px solid #060606;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -51,26 +51,26 @@ body {
   border-radius: 10px;
 }
 #search-text-input::placeholder {
-  color: #fff;
+  color: black;
 }
 #search-form {
   position: relative;
   top: 20px;
 }
-.w-100 {
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 0.375rem 0.75rem;
+  margin-left: 60px;
+  height: 56%;
   width: 100%;
-}
-.shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-.btn-primary {
   color: #000000;
   background-color: #34e1ff;
-  border-color: #007bff;
-}
-.btn {
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+
+  font-size: 19px;
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -97,29 +97,6 @@ body {
   color: #34e1ff;
   background: #fff;
 }
-#current {
-  max-width: 50%;
-  background-color: #34e1ff;
-  border-radius: 10px;
-  flex: 0 0 25%;
-  color: #000000;
-  font-weight: 400;
-  border: 1px solid #ffffff;
-  transition: all 200ms ease-in-out;
-}
-#current:hover {
-  color: #34e1ff;
-  background: #fff;
-}
-
-button {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  position: relative;
-  padding: 0.375rem 0.75rem;
-  margin-left: 10px;
-  height: 56%;
-}
 
 h1 {
   margin-bottom: 20px;
@@ -138,7 +115,7 @@ h1 {
 }
 
 .icon canvas {
-  font-size: 40px;
+  font-size: 300px;
 }
 
 li {

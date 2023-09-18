@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Weather.css";
 
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
@@ -12,7 +13,7 @@ export default function WeatherForecast(props) {
 
   function handleResponse(response) {
     //Once the API response is received, the handleResponse function is called
-    console.log(response.data);
+
     setForecast(response.data.daily); //weather forecast data is set using
     setLoaded(true); //. This triggers a re-render of the component.
   }
@@ -21,8 +22,8 @@ export default function WeatherForecast(props) {
     console.log(forecast);
     return (
       <div className="WeatherForecast">
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <WeatherForecastDay data={forecast[1]} />
           </div>
 

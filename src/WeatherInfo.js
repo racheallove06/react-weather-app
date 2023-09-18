@@ -1,29 +1,29 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import "./Weather.css";
 
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
 export default function WeatherInfo(props) {
-  console.log("WeatherIcon", props.info.icon);
   return (
     <div className="root">
       <div className="row" id="row-2">
-        <div className="col-4">
+        <div className="col">
           <h1>
-            <span class="icon">
+            <span className="icon">
               {" "}
-              <WeatherIcon codes={props.info.icon} />
+              <WeatherIcon code={props.info.icon} />
             </span>
             <WeatherTemperature celsius={props.info.temperature} />
           </h1>
         </div>
-        <div className="col-4">
+        <div className="col">
           <ul>
             <li id="humidity">Humidity:{props.info.humidity}</li>
             <li id="wind">Wind:{props.info.wind}</li>
           </ul>
         </div>
-        <div className="col-4">
+        <div className="col">
           <div>
             <div id="city">{props.info.city}</div>
             <p className="time" id="time-element">

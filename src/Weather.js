@@ -9,8 +9,6 @@ export default function Weather(props) {
   const [cityValue, setCity] = useState(props.city);
 
   function handleResponse(response) {
-    console.log(response);
-
     setWeatherData({
       description: response.data.condition.description,
       wind: response.data.wind.speed,
@@ -66,15 +64,6 @@ export default function Weather(props) {
                       className="form-control btn btn-primary shadow-sm w-100"
                     >
                       Search
-                    </button>
-                  </div>
-                  <div className="col-3">
-                    <button
-                      type="submit"
-                      id="current"
-                      className="form-control btn btn-success shadow-sm w-100"
-                    >
-                      Current
                     </button>
                   </div>
                 </div>
