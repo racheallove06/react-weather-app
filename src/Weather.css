@@ -111,16 +111,17 @@ h1 {
   font-size: 56px;
   top: 10px;
   position: relative;
-  top: 10px;
+  font-weight: 550;
 }
 
 .icon {
-  margin-bottom: 50px;
+  position: relative;
+  top: 12px;
 }
 
 li {
   font-size: 22px;
-  font-weight: 800;
+  font-weight: 550;
   line-height: 1.5;
 }
 p2 {
@@ -200,7 +201,7 @@ a {
   justify-content: space-between;
   position: relative;
   right: 17px;
-  top: 30px;
+  top: 15px;
 }
 .forecastt {
   display: flex;
