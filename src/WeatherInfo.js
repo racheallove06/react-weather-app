@@ -4,7 +4,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
 export default function WeatherInfo(props) {
-  console.log("WeatherInfo", props.info.temperature);
+  console.log("WeatherIcon", props.info.icon);
   return (
     <div className="root">
       <div className="row" id="row-2">
