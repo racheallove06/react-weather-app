@@ -2,7 +2,9 @@ body {
   font-family: "ABeeZee", sans-serif;
   font-family: "Ysabeau Office", sans-serif;
   color: black;
-
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/549/original/Clouds_GIF_-_Find___Share_on_GIPHY.gif?1695034823);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 20px auto;
   padding: 0;
   display: flex;
@@ -16,12 +18,9 @@ body {
   width: 700px;
   height: 500px;
   margin: 20px;
-  background: linear-gradient(
-    181.2deg,
-    rgb(52, 225, 255) 10.5%,
-    rgb(254, 254, 254) 86.8%
-  );
-
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/097/549/original/Clouds_GIF_-_Find___Share_on_GIPHY.gif?1695034823);
+  background-size: cover;
+  background-repeat: no-repeat;
   border: 1px solid #060606;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -35,7 +34,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
-  background-color: #34e1ff;
+  background: transparent;
   background-clip: padding-box;
   border: 1px solid #ffff;
   border-radius: 0.25rem;
@@ -68,7 +67,7 @@ body {
   width: 100%;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   color: #000000;
-  background-color: #34e1ff;
+  background: transparent;
 
   font-size: 19px;
   line-height: 1.5;
@@ -87,14 +86,13 @@ body {
   left: 90px;
   width: 100%;
   border-radius: 10px;
-  background-color: #34e1ff;
+  background: transparent;
   color: #000000;
   font-weight: 400;
   border: 1px solid #ffffff;
   transition: all 200ms ease-in-out;
 }
 #button2:hover {
-  color: #34e1ff;
   background: #fff;
 }
 
@@ -193,7 +191,7 @@ a {
   font-size: 24px;
 }
 .active {
-  color: white;
+  color: black;
 }
 
 .weather-forecast {
@@ -220,7 +218,7 @@ a {
   border-radius: 10px;
   margin: 0 15px;
   transition: all 200ms ease-in-out;
-  background: #54e2fc;
+  background: transparent;
 }
 .forecol:hover {
   cursor: pointer;
