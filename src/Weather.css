@@ -129,31 +129,6 @@ p2 {
   left: 40px;
   font-weight: 500;
 }
-.temp {
-  transition: all 200ms ease-in-out;
-  margin-left: 10px;
-}
-.temp:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #34e1ff;
-}
-.precipitation {
-  transition: all 200ms ease-in-out;
-}
-.precipitation:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #34e1ff;
-}
-.wind {
-  transition: all 200ms ease-in-out;
-}
-.wind:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #34e1ff;
-}
 
 .description-sec {
   font-weight: 600;
@@ -172,21 +147,18 @@ p3 {
 .weather-forecast-date {
   font-size: 20px;
   font-weight: 500;
-  padding-top: 7px;
+
   line-height: 15px;
+  text-align: center;
+}
+
+.weather {
+  font-size: 30px;
 }
 
 .forecast-image {
-  font-size: 10px;
-  display: block;
-  height: 60px;
-  margin: 1px 4px 0;
-  width: 60px;
-  align-items: center;
-  text-align: center;
-}
-.weather {
-  font-size: 30px;
+  position: relative;
+  top: 10px;
 }
 
 .temperature-container {
@@ -207,18 +179,13 @@ ul {
   list-style: none;
   margin-left: 10px;
 }
-#description {
-  font-size: 24px;
-  color: #fff;
-  font-weight: 400;
-  margin-top: -40px;
-}
+
 a {
   text-decoration: none;
 }
 
 #row-2 {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .col-2 {
@@ -231,6 +198,9 @@ a {
 .weather-forecast {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  right: 17px;
+  top: 30px;
 }
 .forecastt {
   display: flex;

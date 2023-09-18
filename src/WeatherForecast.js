@@ -21,7 +21,7 @@ export default function WeatherForecast(props) {
   if (loaded) {
     console.log(forecast);
     return (
-      <div className="WeatherForecast weather-forecast">
+      <div className="WeatherForecast weather-forecast me-2">
         <div className="row forecastt  ">
           <div className="col forecol">
             <WeatherForecastDay data={forecast[1]} />

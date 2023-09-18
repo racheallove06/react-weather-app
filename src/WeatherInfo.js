@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
           <h1>
             <span className="icon">
               {" "}
-              <WeatherIcon code={props.info.icon} />
+              <WeatherIcon code={props.info.icon} size={56} />
             </span>
             <WeatherTemperature celsius={props.info.temperature} />
           </h1>
@@ -32,13 +32,6 @@ export default function WeatherInfo(props) {
             <li>{props.info.description}</li>
           </ul>
         </div>
-      </div>
-      <div>
-        <span className="temp">Temperature</span>
-        <span>|</span>
-        <span className="precipitation">Precipitation</span>
-        <span>|</span>
-        <span className="wind">Wind</span>
       </div>
       <div className="weather-forecast" id="forecast"></div>{" "}
     </div>
